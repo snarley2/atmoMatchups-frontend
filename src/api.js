@@ -38,6 +38,7 @@ export const api = {
   saveMatchups:(date,groups,office)=>request("/api/matchups",{method:"POST",body:JSON.stringify({date,groups,office})}),
   generateWorkMatchups:()=>request("/api/work-matchups/generate",{method:"POST",body:"{}"}),
   getWorkMatchups:()=>request("/api/work-matchups"),
+  getTrainingWatch:(mode="both",threshold=20)=>request(`/api/training-watch?mode=${encodeURIComponent(mode)}&threshold=${encodeURIComponent(threshold)}`),
   saveWorkMatchups:(date,groups,actor,action)=>request("/api/work-matchups",{method:"POST",body:JSON.stringify({date,groups,actor,action})}),
   generateStoreMatchups:()=>request("/api/store-matchups/generate",{method:"POST",body:"{}"}),
   getStoreCatalog:()=>request("/api/store-matchups/catalog"),
