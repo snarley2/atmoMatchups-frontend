@@ -36,6 +36,7 @@ export const api = {
   saveDraftMatchups:(date,groups,actor,action,office)=>request("/api/matchups/draft",{method:"PUT",body:JSON.stringify({date,groups,actor,action,office})}),
   getFinalMatchups:(office)=>request(withOffice("/api/matchups/final",office)),
   saveMatchups:(date,groups,office)=>request("/api/matchups",{method:"POST",body:JSON.stringify({date,groups,office})}),
+  importProductionReps:()=>request("/api/production-reps/import",{method:"POST",body:"{}"}),
   generateWorkMatchups:()=>request("/api/work-matchups/generate",{method:"POST",body:"{}"}),
   getWorkMatchups:()=>request("/api/work-matchups"),
   getTrainingWatch:(mode="both",threshold=20)=>request(`/api/training-watch?mode=${encodeURIComponent(mode)}&threshold=${encodeURIComponent(threshold)}`),

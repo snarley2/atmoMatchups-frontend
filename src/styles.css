@@ -133,3 +133,44 @@
 /* Show concrete E, G, and total production values. */
 .production-totals{display:grid;grid-template-columns:repeat(3,minmax(54px,1fr));gap:5px;min-width:205px}.production-totals>span{display:grid;place-items:center;padding:5px 6px;border-radius:8px;background:#eaf2fb;color:#174f86;text-align:center}.production-totals small{font-size:7px!important;line-height:1.15;letter-spacing:.03em;text-transform:uppercase;color:#64748b!important}.production-totals b{font-size:13px;line-height:1.2}.production-totals.compact{min-width:190px}.work-team-card>header{grid-template-columns:minmax(0,1fr) auto auto}.work-rep .production-totals,.store-rep-card .production-totals{min-width:190px}.store-rep-card .work-team-select{border-color:#8eb9e6;background:#f2f8ff;color:#174f86;font-weight:800}
 @media(max-width:650px){.production-totals,.production-totals.compact,.work-rep .production-totals,.store-rep-card .production-totals{min-width:0;width:100%;grid-column:1/-1}.work-team-card>header{grid-template-columns:1fr auto}.work-team-card>header .production-totals{grid-column:1/-1}}
+
+/* Restore the two-column original store-sheet presentation. */
+.store-catalog-layout{display:grid;grid-template-columns:minmax(250px,35%) minmax(0,1fr);gap:16px;align-items:start;margin-top:16px}
+.store-catalog-reps,.store-catalog-list{min-width:0;display:flex;flex-direction:column;gap:12px}
+.store-catalog-reps{background:var(--card,white);border-radius:14px;padding:12px}
+.store-catalog-reps>header{display:flex;justify-content:space-between;align-items:center}
+.store-catalog-list .catalog-store-row{width:100%}
+.store-matchups-view .catalog-store-member{width:100%;min-width:0}
+.store-matchups-view .catalog-store-member select{max-width:100%;min-height:40px}
+@media(max-width:800px){.store-catalog-layout{grid-template-columns:1fr}}
+
+/* Weekly Coaching Focus: expandable rep-average-style summaries */
+.weekly-focus-view{max-width:1250px;margin:0 auto;padding:0 12px 28px}
+.weekly-focus-toolbar{display:flex;flex-wrap:wrap;gap:12px;background:var(--card,#fff);border:1px solid #dbe3ed;border-radius:14px;padding:16px;margin:16px 0}
+.weekly-focus-toolbar label{display:flex;flex-direction:column;gap:5px;font-size:12px;font-weight:700;color:#516078;flex:1 1 190px}
+.weekly-focus-toolbar select,.weekly-focus-toolbar input{border:1px solid #cbd5e1;border-radius:9px;padding:11px 12px;font-size:15px;min-height:44px;background:#fff;color:#17233a;width:100%}
+.weekly-focus-toolbar .weekly-focus-search{flex:2 1 240px}
+.weekly-focus-count{font-size:13px;font-weight:700;color:#52657f;margin:12px 4px}
+.weekly-focus-list{display:flex;flex-direction:column;gap:10px}
+.weekly-focus-member{background:#fff;border:1px solid #dde5ee;border-radius:13px;overflow:hidden;box-shadow:0 2px 8px rgba(15,32,56,.04)}
+.weekly-focus-member.expanded{border-color:#9fb5cf}
+.weekly-focus-member-head{width:100%;display:flex;align-items:center;gap:12px;text-align:left;background:transparent;border:0;padding:16px;cursor:pointer;color:#182b46}
+.weekly-focus-identity{display:flex;flex-direction:column;gap:4px;flex:1;min-width:0}
+.weekly-focus-identity strong{font-size:16px}.weekly-focus-identity small{color:#64748b;font-size:12px}
+.weekly-focus-priority{display:flex;flex-direction:column;align-items:flex-start;gap:5px;background:#f2f6fc;border-radius:9px;padding:9px 12px;max-width:42%}
+.weekly-focus-priority small{font-size:11px;color:#64748b}.weekly-focus-priority b{font-size:13px;color:#28496b}
+.weekly-focus-expand{white-space:nowrap;color:#365a89;font-weight:700;font-size:12px}
+.weekly-focus-expanded{border-top:1px solid #e2e8f0;padding:15px;background:#f8fafc}
+.weekly-focus-periods{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.weekly-focus-period{background:white;border:1px solid #e2e8f0;border-radius:12px;padding:14px;min-width:0}
+.weekly-focus-period header{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:12px}
+.weekly-focus-period h4{margin:0;font-size:14px}.weekly-focus-period header small{color:#64748b}
+.weekly-focus-rates{display:flex;flex-direction:column;gap:7px}
+.weekly-focus-rate-row{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid #edf1f5;font-size:12px}
+.weekly-focus-rate-row:last-child{border:0}.weekly-focus-rate-row>span:first-child{min-width:0}
+.weekly-focus-rate{font-size:13px;font-weight:800;border-radius:7px;padding:5px 8px;white-space:nowrap}
+.weekly-focus-rate.good{background:#d9ead3;color:#274e13}.weekly-focus-rate.needs-work{background:#fff0d8;color:#8a4600}
+.weekly-focus-empty-rate{color:#94a3b8;font-weight:700}
+.weekly-focus-notice{color:#7c5360;font-size:12px;margin:12px 0 0}
+.weekly-focus-empty,.weekly-focus-error{padding:18px;background:#fff;border-radius:10px;color:#55657c}
+@media(max-width:760px){.weekly-focus-periods{grid-template-columns:1fr}.weekly-focus-member-head{gap:8px;padding:13px}.weekly-focus-expand{display:none}.weekly-focus-priority{max-width:48%;padding:7px 9px}.weekly-focus-identity strong{font-size:14px}}
